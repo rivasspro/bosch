@@ -1,3 +1,3 @@
 # bosch
 
-- David Rivas
+- David Rivas H.
