@@ -1,4 +1,4 @@
-/main>
+</main>
 <footer>
   <div class="footer-primary -contrast">
     <div class="Footer_row">
