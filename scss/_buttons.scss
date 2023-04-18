@@ -1,0 +1,44 @@
+.btn{
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 12px;
+  color: initial;
+  line-height: normal;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-primary{
+  color: var(--bosch-white);
+  border-color: var(--bosch-blue-50);
+  background-color: var(--bosch-blue-50);
+  &-outline{
+    background-color: transparent;
+    color: var(--bosch-blue-50);
+    border-color: var(--bosch-blue-50);
+  }
+}
+.Link {
+  text-decoration: none;
+  color: var(--bosch-blue-70);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.Link_label::after {
+  transform: rotate(-45deg);
+  -webkit-margin-start: 0.25em;
+  margin-inline-start: 0.25em;
+}
+.Link_label::after {
+  content: "";
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1.1pt;
+  border-block-end-width: 1.1pt;
+  display: inline-block;
+  height: 0.45em;
+  position: relative;
+  vertical-align: middle;
+  width: 0.45em;
+}

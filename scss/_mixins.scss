@@ -1,0 +1,5 @@
+@mixin mq ( $media : 480px){
+  @media screen and (max-width : $media){
+    @content;
+  }
+}

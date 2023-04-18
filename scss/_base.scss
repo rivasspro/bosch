@@ -1,0 +1,52 @@
+body.overflow {
+  overflow: hidden;
+}
+
+.contenedor {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: var(--containerW);
+  @include mq (1193px){
+    padding-inline-start: var(--gu2);
+    padding-inline-end: var(--gu2);
+  }
+}
+
+main {
+  article {
+    background-color: var(--bosch-white);
+    margin: 20px 0;
+    padding: 20px;
+    height: 500px;
+    @include mq(1193px) {
+      width: 95% !important;
+    }
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.25;
+    margin: 0 0 var(--gu3) 0;
+    font-weight: 600;
+  }
+  .h1 {
+    font-size: 48px;
+    line-height: 1.208;
+    font-weight: 600;
+    @include mq(768px) {
+      font-size: 32px;
+      line-height: 1.313;
+      margin: 0 0 var(--gu3) 0;
+    }
+  }
+  section {
+    &.section {
+      padding-bottom: 80px;
+      padding-top: 80px;
+      @include mq(768px) {
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
+    }
+  }
+}

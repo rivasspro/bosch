@@ -1,0 +1,99 @@
+section {
+  * {
+    // outline: 1px solid red;
+  }
+  &.categoryCopy {
+    background-color: var(--bosch-white);
+    .category {
+      &__copy {
+        h1 {
+          font-size: 48px;
+          line-height: 1.208;
+          margin-bottom: var(--gu2);
+          @include mq(1193px) {
+            font-size: 40px;
+            line-height: 1.25;
+          }
+        }
+        h3 {
+          font-size: 20px;
+          line-height: 1.5;
+          margin-bottom: var(--gu6);
+        }
+      }
+    }
+  }
+  &.categoryListProduct {
+    background-color: var(--bosch-white);
+    .listProduct {
+      padding-left: var(--gu2);
+      padding-right: var(--gu2);
+      &__item {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gu5) var(--gu4);
+        word-break: break-word;
+        padding-bottom: var(--gu8);
+        margin-bottom: var(--gu8);
+        border-bottom: 1px solid var(--bosch-gray-80);
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+      &__img {
+        grid-column: span 6;
+        img {
+          width: 90%;
+        }
+        @include mq(768px){
+          grid-column: span 12;
+        }
+      }
+      &__copy {
+        grid-column: span 6;
+        place-content: center;
+        display: inline-grid;
+        justify-content: flex-start;
+        @include mq(768px){
+          grid-column: span 12;
+        }
+        .title {
+          font-size: 40px;
+          line-height: 1.25;
+          font-weight: 600;
+          margin-bottom: var(--gu3);
+          & > a:hover {
+            color: var(--bosch-blue-50);
+          }
+          @include mq(1193px) {
+            font-size: 32px;
+            line-height: 1.313;
+          }
+        }
+        .list {
+          li {
+            margin-bottom: var(--gu2);
+            position: relative;
+            padding-inline-start: var(--gu4);
+            &::before {
+              position: absolute;
+              background-color: var(--color-primario);
+              content: "";
+              height: 0.5rem;
+              width: 0.5rem;
+              top: 6px;
+              left: 0;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .link > a {
+          color: var(--bosch-blue-50);
+          margin-top: var(--gu3);
+        }
+      }
+    }
+  }
+}
