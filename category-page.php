@@ -26,7 +26,11 @@ include('encabezados.php');
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
           </ul>
+<<<<<<< HEAD
           <a href="list-page.php" class="btn btn-primary">Lorem, ipsum.</a>
+=======
+          <div class="btn btn-primary">Lorem, ipsum.</div>
+>>>>>>> 974ce897f88666e1f1c4b8ac872ca06b997511d5
         </div>
         <div class="categoryPage__end">
           <img src="./img/category_page.jpg" alt="">
