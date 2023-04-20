@@ -1,0 +1,104 @@
+.categoryPage {
+  padding: 40px 0 80px;
+  @include mq(1193px) {
+    padding-top: 20px;
+  }
+  &__item {
+    background-color: var(--bosch-gray-95);
+    margin-bottom: var(--gu4);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 36px auto minmax(auto, 1fr) 36px;
+    gap: 20px 32px;
+    padding-left: calc((100% - var(--containerW)) / 2);
+    @include mq(768px) {
+      grid-template-rows: 12px auto auto auto 12px;
+      grid-column-gap: var(--gridGap);
+      grid-gap: 20px 32px;
+    }
+  }
+  &__start {
+    grid-column: 1/7;
+    grid-row: 2/2;
+    @include mq(768px) {
+      grid-column: 1/13;
+      grid-row: 2/2;
+    }
+    @include mq(576px) {
+      grid-column: 1/13;
+    }
+    .title {
+      font-size: 40px;
+      line-height: 1.25;
+      font-weight: 600;
+      @include mq(1193px) {
+        font-size: 32px;
+        line-height: 1.313;
+      }
+      @include mq(768px) {
+        font-size: 28px;
+        line-height: 1.357;
+      }
+    }
+  }
+  &__center {
+    grid-column: 1/7;
+    grid-row: 3/4;
+    @include mq(768px) {
+      grid-column: 1/13;
+      grid-row: 4/4;
+    }
+    @include mq(576px) {
+      grid-column: 1/13;
+      grid-row: 4/4;
+    }
+    p {
+      margin-bottom: var(--gu3);
+    }
+    ul {
+      margin-bottom: var(--gu3);
+    }
+    li {
+      margin-bottom: var(--gu2);
+      position: relative;
+      padding-inline-start: var(--gu4);
+      &::before {
+        position: absolute;
+        background-color: var(--color-primario);
+        content: "";
+        height: 0.5rem;
+        width: 0.5rem;
+        top: 6px;
+        left: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .link > a {
+      color: var(--bosch-blue-50);
+      margin-top: var(--gu3);
+    }
+  }
+  &__end {
+    grid-column: 8/13;
+    grid-row: 2/4;
+    margin-right: var(--gu4);
+    @include mq(1193px) {
+      grid-column: 7/13;
+      grid-row: 3/4;
+      margin-bottom: 0;
+      margin-right: var(--gu2);
+    }
+    @include mq(768px) {
+      grid-column: 1/13;
+      grid-row: 3/3;
+      overflow: hidden;
+      margin-bottom: 4px;
+      margin-right: 0;
+    }
+  }
+}
