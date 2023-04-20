@@ -17,7 +17,6 @@ section {
         }
       }
       .productText {
-        padding-inline-start: 20px;
         flex-basis: 50%;
         @include mq(768px) {
           padding-inline-start: 0;

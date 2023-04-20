@@ -15,6 +15,12 @@ section {
             line-height: 1.25;
           }
         }
+        p{
+          margin-bottom: var(--gu3);
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
         h3 {
           font-size: 20px;
           line-height: 1.5;
