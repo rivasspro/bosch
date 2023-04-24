@@ -86,7 +86,7 @@ $m_actual = 'menu' . $title;
               <button class="btn-regresar"><svg class="Icon Icon-arrow-left SubMenu_Icon" data-src="https://www.bosch-thermotechnology.com/resources/assets/svg/icons/icon-arrow-left.svg" data-cache="604800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="48" height="48" data-id="svg-loader_3">
                   <path d="M176 100H33.657l25.172 25.171-5.658 5.658L18.343 96l34.828-34.829 5.658 5.658L33.657 92H176v8z"></path>
                 </svg></button>
-              <a href="./producto.php">Todos los productos</a>
+              <a href="./category.php">Todos los productos</a>
               <a href="#" data-categoria="residencial">Residencial
                 <svg class="Icon Icon-forward-right SubMenu_Icon -visible-lg -end" data-src="https://www.bosch-thermotechnology.com/resources/assets/svg/icons/icon-forward-right.svg" data-cache="604800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="48" height="48" data-id="svg-loader_12">
                   <path d="M70.829 158.829l-5.658-5.658L122.343 96 65.171 38.829l5.658-5.658L133.657 96l-62.828 62.829z"></path>
@@ -117,7 +117,7 @@ $m_actual = 'menu' . $title;
                       <path d="M176 100H33.657l25.172 25.171-5.658 5.658L18.343 96l34.828-34.829 5.658 5.658L33.657 92H176v8z"></path>
                     </svg>
                   </button>
-                  <a href="#" class="subtitulo">Toda la gama</a>
+                  <a href="category-products.php" class="subtitulo">Toda la gama</a>
                   <a href="#">Descubre tu calentador ideal</a>
                   <a href="#">Calentadores de depósito</a>
                   <a href="#">Calentadores de paso</a>

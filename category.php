@@ -33,7 +33,7 @@ include('encabezados.php');
             </ul>
           </div>
           <div class="link">
-            <a href="#" class="Link" href="#">
+            <a href="producto.php" class="Link" href="#">
               <span class="Link_label">Más detalles</span>
             </a>
           </div>
