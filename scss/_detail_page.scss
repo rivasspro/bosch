@@ -1,0 +1,149 @@
+.detailPage {
+  padding: 40px 0 80px;
+  @include mq(1193px) {
+    padding-top: 20px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: var(--gu4);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__start {
+    overflow: hidden;
+    height: fit-content;
+  }
+
+  &__end {
+    .categoryPage__flag-item {
+      margin-bottom: var(--gu4);
+    }
+    .title {
+      font-size: 40px;
+      line-height: 1.25;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      @include mq(1193px) {
+        font-size: 32px;
+        line-height: 1.313;
+      }
+      @include mq(768px) {
+        font-size: 28px;
+        line-height: 1.357;
+      }
+    }
+    .tag {
+      margin-bottom: var(--gu4);
+      img {
+        max-width: 120px;
+        height: 49px;
+      }
+      & ~ p {
+        margin-bottom: var(--gu4);
+      }
+    }
+    ul {
+      margin-bottom: var(--gu3);
+    }
+    li {
+      margin-bottom: var(--gu2);
+      position: relative;
+      padding-inline-start: var(--gu4);
+      &::before {
+        position: absolute;
+        background-color: var(--color-primario);
+        content: "";
+        height: 0.5rem;
+        width: 0.5rem;
+        top: 6px;
+        left: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-icons {
+      display: flex;
+      column-gap: 2rem;
+      margin-bottom: var(--gu3);
+      a {
+        max-width: 2.5rem;
+      }
+    }
+  }
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+  .swiper-slide {
+    padding-bottom: 1.6rem;
+  }
+  .swiper-zoom {
+    cursor: pointer;
+    position: absolute;
+    inset: auto 0 0 auto;
+  }
+}
+
+.mySwiper {
+  // height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0 var(--gu1);
+  margin-top: var(--gu5);
+}
+
+.mySwiper .swiper-slide {
+  width: 80px;
+  height: 80px;
+  border: solid 1px var(--bosch-gray-60);
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  border: solid 1px var(--bosch-blue-50);
+  border-width: 2px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+.pagination {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  .swiper-pagination {
+    width: auto;
+    position: relative;
+    top: 0rem;
+    font-size: small;
+  }
+  .swiper-arrow {
+    position: relative;
+    height: 3rem;
+    width: 7.5rem;
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 3rem;
+      color: inherit;
+      &::after {
+        font-size: 13px;
+      }
+    }
+  }
+}

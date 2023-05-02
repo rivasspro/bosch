@@ -31,7 +31,15 @@ include('encabezados.php');
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
           </ul>
-          <div class="btn btn-primary">Lorem, ipsum.</div>
+          <div class="categoryPage__center-icons">
+            <a href="#"><img src="./img/icons/icon1_active.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon2_active.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon3_active.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon4_active.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon5_active.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon6_active.svg" alt="Bosch"></a>
+          </div>
+          <a href="detail-page.php" class="btn btn-primary">Lorem, ipsum.</a>
         </div>
         <div class="categoryPage__end">
           <img src="./img/list_page.png" alt="">
@@ -59,7 +67,15 @@ include('encabezados.php');
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
           </ul>
-          <div class="btn btn-primary">Lorem, ipsum.</div>
+          <div class="categoryPage__center-icons">
+            <a href="#"><img src="./img/icons/icon1.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon2.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon3.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon4.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon5.svg" alt="Bosch"></a>
+            <a href="#"><img src="./img/icons/icon6.svg" alt="Bosch"></a>
+          </div>
+          <a href="detail-page.php" class="btn btn-primary">Lorem, ipsum.</a>
         </div>
         <div class="categoryPage__end">
           <img src="./img/list_page.png" alt="">

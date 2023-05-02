@@ -5,7 +5,8 @@
   }
   &__item {
     background-color: var(--bosch-gray-95);
-    margin-bottom: var(--gu4);
+    margin:0 auto var(--gu4);
+    max-width: 1600px;
   }
 
   &__wrapper {
@@ -17,7 +18,7 @@
     @include mq(768px) {
       grid-template-rows: 12px auto auto auto 12px;
       grid-column-gap: var(--gridGap);
-      grid-gap: 20px 32px;
+      grid-gap: 20px 0;
     }
   }
   &__start {

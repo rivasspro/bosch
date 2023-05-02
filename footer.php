@@ -65,7 +65,9 @@
     </div>
   </div>
 </footer>
-<script src="./js/main.js?v=228"></script>
+<script src="https://kit.fontawesome.com/5fe2d90eda.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/main.js?v=229"></script>
 </body>
 <!--test de comentario-->
 
