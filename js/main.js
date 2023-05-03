@@ -1,8 +1,6 @@
 const contenedor_enlaces = document.querySelector(".contenedor-enlaces-nav"),
   categorias = document.querySelector("#grid-productos .categorias"),
-  contenedor_subcategorias = document.querySelector(
-    ".contenedor-subcategorias"
-  ),
+  contenedor_subcategorias = document.querySelector(".contenedor-subcategorias"),
   productos = document.getElementById("productos"),
   servicios = document.getElementById("servicios"),
   conocimiento = document.getElementById("conocimiento"),
@@ -23,9 +21,11 @@ const contenedor_enlaces = document.querySelector(".contenedor-enlaces-nav"),
   headerNavigation = document.querySelector(".Header_navigation"),
   btnMobile = document.getElementById("btnMobile"),
   quickAssistence = document.querySelector(".quickAssistence");
-esDispositivoMovil = () => window.innerWidth <= 1193;
+  esDispositivoMovil = () => window.innerWidth <= 1193;
 
+  
 //Close Menu
+// addEventListener("mouseleave")
 btnClose.addEventListener("click", () => {
   grid_productos.classList.remove("activo");
   productos.classList.remove("activo");
@@ -155,15 +155,11 @@ btnRegresar2.addEventListener("click", () => {
   quickAssistence.style.display = null;
 });
 // Open Sub-categorias Productos
-document
-  .querySelectorAll("#grid-productos .categorias a")
-  .forEach((elemento) => {
+document.querySelectorAll("#grid-productos .categorias a").forEach((elemento) => {
     if (esDispositivoMovil()) {
       elemento.addEventListener("click", (e) => {
         // console.log(e.target.dataset.categoria)
-        document
-          .querySelectorAll("#grid-productos .subcategoria")
-          .forEach((categoria) => {
+        document.querySelectorAll("#grid-productos .subcategoria").forEach((categoria) => {
             // console.log(categoria.dataset.categoria);
             categoria.classList.remove("activo");
             //contenedor_subcategorias.classList.remove('activo');
@@ -199,74 +195,60 @@ backEmisores.addEventListener("click", () => {
   console.log("backSub");
 });
 
-// grid_productos.addEventListener('mouseleave', () => {
-//   if (!esDispositivoMovil()) {
-//     grid_productos.classList.remove('activo');
-//   }
-// });
-// grid_servicios.addEventListener('mouseleave', () => {
-//   if (!esDispositivoMovil()) {
-//     grid_servicios.classList.remove('activo');
-//   }
-// });
-// grid_conocimiento.addEventListener('mouseleave', () => {
-//   if (!esDispositivoMovil()) {
-//     grid_conocimiento.classList.remove('activo');
-//   }
-// });
-
 // -- MODAL --
 
-const closeModal = document.querySelectorAll(".modal__close");
-const tagP = document.querySelector(".tagP");
 const tag = document.querySelectorAll(".table_tag");
-const modalP = document.querySelector(".modal.p");
-const modal = document.querySelectorAll(".modal");
-const btnZoom = document.querySelectorAll(".swiper-zoom");
-const modalSlider = document.querySelector(".modal.slider");
+const modal = document.querySelector(".modal__tag");
+const modalClose = document.querySelectorAll(".modal__close");
+const swiperZoom = document.querySelectorAll(".swiper-zoom");
+const modalSwiper = document.querySelector(".modal__swiper");
+const swiperItem = document.querySelectorAll(".mySwiper3 .swiper-slide");
 const bodyOverflow = () => {
   document.querySelector("body").classList.toggle("overflow");
 };
 
-tagP.addEventListener("click", () => {
-  modalP.classList.add("modal--show");
-  console.log("tag-principal");
-  bodyOverflow();
-});
 
-// */ Click tags table_producto
-tag.forEach((cadaTag, i) => {
-  tag[i].addEventListener("click", (e) => {
+// -- Tags --
+
+swiperZoom.forEach((element, i) => {
+  element.addEventListener("click", (e) => {
+    //(e) evita link haga scroll al click
     e.preventDefault();
-    tag.forEach((cadaTag, i) => {
-      modal[i].classList.remove("modal--show");
-    });
-    modal[i].classList.add("modal--show");
+    modalSwiper.classList.add("modal--show");
+
+    swiperItem[i].classList.add("swipper-slide-active");
     bodyOverflow();
-    console.log(cadaTag + ` open-modal ` + [i]);
-  });
-});
-btnZoom.forEach((swiper_zoom, i) => {
-  btnZoom[i].addEventListener("click", (e) => {
-    e.preventDefault();
-    btnZoom.forEach((swiper_zoom, i) => {
-      modalSlider.classList.remove("modal--show");
-    });
-    modalSlider[i].classList.add("modal--show");
-    console.log(swiper_zoom + ` click ` + [i]);
-    
-  });
-});
-closeModal.forEach((cadaClose, i) => {
-  closeModal[i].addEventListener("click", (e) => {
-    e.preventDefault();
-    modal[i].classList.remove("modal--show");
-    bodyOverflow();
-    console.log(cadaClose + ` close-modal ` + [i]);
+    console.log(element + ` Open Modal Swiper ` + [i]);
+    console.log(swiperItem + `  Item Swiper ` + [i]);
+ 
+
   });
 });
 
-// -- Slider
+
+tag.forEach((element, i) => {
+  element.addEventListener("click", (e) => {
+    //(e) evita link haga scroll al click
+    e.preventDefault();
+    modal.classList.add("modal--show");
+    bodyOverflow();
+    console.log(element + ` Open Modal ` + [i]);
+  });
+});
+
+modalClose.forEach((element, i) => {
+  element.addEventListener("click", (e) => {
+    //(e) evita link haga scroll al click
+    e.preventDefault();
+    // close both modal's
+    modal.classList.remove("modal--show");
+    modalSwiper.classList.remove("modal--show");
+    bodyOverflow();
+    console.log(element + ` Close Modal ` + [i]);
+  });
+});
+
+// -- Slider --
 
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 10,
@@ -283,12 +265,19 @@ var swiper2 = new Swiper(".mySwiper2", {
   thumbs: {
     swiper: swiper,
   },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+});
+var swiper3 = new Swiper(".mySwiper3", {
+  spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".sp3",
     type: "fraction",
   },
 });
