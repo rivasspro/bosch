@@ -249,6 +249,7 @@
           display: none;
         }
       }
+
       .contenedor-grid {
         position: relative;
         .grid-padre {
@@ -527,7 +528,7 @@
 .Btn_Icon {
   margin: 12px 8px;
 }
-@media screen and (max-width: 1193px) {
+@media screen and (max-width:  1193px) {
   .contenedor {
     max-width: 100%;
   }
