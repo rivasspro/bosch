@@ -37,11 +37,6 @@ $m_actual = 'menu' . $title;
   <div class="Header_navigation">
     <nav class="menu contenedor" id="menu">
 
-      <!-- <div class="contenedor-botones-menu">
-        <button id="btn-menu-barras" class="btn-menu-barras"><i class="fa-solid fa-bars"></i></button>
-        <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fa-solid fa-times"></i></button>
-      </div> -->
-
       <div class="contenedor-enlaces-nav">
         <ul class="Navigation_Items">
           <li class="Navigation_Item">
@@ -75,6 +70,13 @@ $m_actual = 'menu' . $title;
         </div> -->
       </div>
 
+      <div class="contenedor-breadcrumbs">
+        <ol>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Lorem 1</a></li>
+          <li><a href="#">Lorem 2</a></li>
+        </ol>
+      </div>
       <!-- Productos -->
       <div class="contenedor-grid">
         <div class="grid-padre">

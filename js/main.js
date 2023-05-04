@@ -23,9 +23,8 @@ const contenedor_enlaces = document.querySelector(".contenedor-enlaces-nav"),
   quickAssistence = document.querySelector(".quickAssistence");
   esDispositivoMovil = () => window.innerWidth <= 1193;
 
-  
 //Close Menu
-// addEventListener("mouseleave")
+
 btnClose.addEventListener("click", () => {
   grid_productos.classList.remove("activo");
   productos.classList.remove("activo");
@@ -202,29 +201,27 @@ const modal = document.querySelector(".modal__tag");
 const modalClose = document.querySelectorAll(".modal__close");
 const swiperZoom = document.querySelectorAll(".swiper-zoom");
 const modalSwiper = document.querySelector(".modal__swiper");
-const swiperItem = document.querySelectorAll(".mySwiper3 .swiper-slide");
+
 const bodyOverflow = () => {
   document.querySelector("body").classList.toggle("overflow");
 };
 
-
+function css(element, style) {
+  for (const property in style)
+      element.style[property] = style[property];
+}
 // -- Tags --
 
 swiperZoom.forEach((element, i) => {
   element.addEventListener("click", (e) => {
-    //(e) evita link haga scroll al click
     e.preventDefault();
     modalSwiper.classList.add("modal--show");
-
-    swiperItem[i].classList.add("swipper-slide-active");
+    swiperModal.slideTo(swiper.activeIndex);
     bodyOverflow();
-    console.log(element + ` Open Modal Swiper ` + [i]);
-    console.log(swiperItem + `  Item Swiper ` + [i]);
- 
-
+    console.log(element + ` swiper-zomm ` + [i]);
+    console.log('David Rivas | uxui | @rivaspro | david22rivas@gmail.com');
   });
 });
-
 
 tag.forEach((element, i) => {
   element.addEventListener("click", (e) => {
@@ -233,6 +230,7 @@ tag.forEach((element, i) => {
     modal.classList.add("modal--show");
     bodyOverflow();
     console.log(element + ` Open Modal ` + [i]);
+    console.log('David Rivas | uxui | @rivaspro | david22rivas@gmail.com');
   });
 });
 
@@ -245,39 +243,42 @@ modalClose.forEach((element, i) => {
     modalSwiper.classList.remove("modal--show");
     bodyOverflow();
     console.log(element + ` Close Modal ` + [i]);
+    console.log('David Rivas | uxui | @rivaspro | david22rivas@gmail.com');
   });
 });
 
 // -- Slider --
 
-var swiper = new Swiper(".mySwiper", {
+var swiperThumbs = new Swiper(".swiperThumbs", {
   spaceBetween: 10,
   slidesPerView: 6,
   freeMode: true,
   watchSlidesProgress: true,
 });
-var swiper2 = new Swiper(".mySwiper2", {
+
+var swiper = new Swiper(".swiperMain", {
   spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   thumbs: {
-    swiper: swiper,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
+    swiper: swiperThumbs,
+  }
 });
-var swiper3 = new Swiper(".mySwiper3", {
+
+var swiperModal = new Swiper(".swiperModal", {
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".sp3",
+    el: ".swiper-pagination",
     type: "fraction",
   },
 });
