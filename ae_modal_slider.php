@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="pagination">
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination-modal"></div>
           <div class="swiper-arrow">
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>

@@ -278,7 +278,7 @@ var swiperModal = new Swiper(".swiperModal", {
     prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination-modal",
     type: "fraction",
   },
 });
