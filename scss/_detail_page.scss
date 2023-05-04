@@ -70,10 +70,34 @@
     }
     &-icons {
       display: flex;
-      column-gap: 2rem;
+      column-gap: var(--gu2);
       margin-bottom: var(--gu3);
+      svg {
+        width: var(--iconSize);
+        height: var(--iconSize);
+      }
       a {
-        max-width: 2.5rem;
+        position: relative;
+        cursor: help;
+      }
+      a::before {
+        content: attr(data-tooltip-text);
+        display: none;
+        position: absolute;
+        bottom: 105%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 6px 12px;
+        background-color: var(--bosch-white);
+        color: var(--bosch-black);
+        font-size: 14px;
+        box-shadow:0 0 .5rem .1rem var(--shadow-fill);
+        max-width: 300px;
+        width: max-content;
+      }
+
+      a:hover::before {
+        display: block;
       }
     }
   }
@@ -81,7 +105,7 @@
     padding: 40px 0 80px;
     details {
       border-top: 1px solid var(--bosch-black);
-      &[open] summary{
+      &[open] summary {
         &::after {
           transform: rotate(180deg);
         }
@@ -94,7 +118,7 @@
         font-weight: 600;
         position: relative;
         cursor: pointer;
-        &:hover{
+        &:hover {
           color: var(--bosch-blue-50);
         }
         @include mq(1193px) {
@@ -113,7 +137,7 @@
         @include mq(1193px) {
           padding: var(--gu3) 0 var(--gu4);
         }
-        &.--p0{
+        &.--p0 {
           padding-top: 0;
           padding-bottom: 0;
         }
@@ -145,18 +169,18 @@
         grid-template-columns: repeat(12, 1fr);
         gap: 1rem;
         @extend .details__item;
-        @include mq(768px){
+        @include mq(768px) {
           grid-template-columns: 1fr;
         }
         &-start {
           grid-column: 1/5;
-          @include mq(768px){
+          @include mq(768px) {
             grid-column: 1/-1;
           }
         }
         &-end {
           grid-column: 5/10;
-          @include mq(768px){
+          @include mq(768px) {
             grid-column: 1/-1;
           }
         }
@@ -208,13 +232,13 @@
         &-start {
           grid-column: 1/5;
           font-weight: 600;
-          @include mq(768px){
+          @include mq(768px) {
             grid-column: 1/-1;
           }
         }
         &-end {
           grid-column: 5/10;
-          @include mq(768px){
+          @include mq(768px) {
             grid-column: 1/-1;
           }
         }
@@ -238,7 +262,7 @@
   }
 }
 
-.mySwiper2 {
+.swiperMain {
   width: 100%;
   .swiper-slide {
     padding-bottom: 1.6rem;
@@ -249,8 +273,26 @@
     inset: auto 0 0 auto;
   }
 }
+.modal__swiper {
+  .swiperModal {
+    width: 100%;
+    height: 100%;
+  }
 
-.mySwiper {
+  .modal__body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper {
+    height: calc(100% - 3rem);
+  }
+  .pagination {
+    width: 95%;
+    margin: auto;
+  }
+}
+.swiperThumbs {
   box-sizing: border-box;
   padding: 10px 0 var(--gu1);
   margin-top: var(--gu5);
