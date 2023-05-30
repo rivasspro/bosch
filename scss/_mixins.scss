@@ -3,3 +3,8 @@
     @content;
   }
 }
+@mixin mq-min ( $media : 1194px){
+  @media screen and (min-width : $media){
+    @content;
+  }
+}

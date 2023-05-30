@@ -1,0 +1,131 @@
+.contactPage {
+  padding-bottom: 80px;
+  * {
+    outline: 1px dashed red;
+  }
+  &__hero {
+    background: var(--bosch-white) url(../img/contact_hero.jpg) no-repeat
+      center/cover;
+    min-height: 480px;
+  }
+  &__text {
+    --gridGap: var(--gu5) var(--gu4);
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: var(--gridGap);
+  }
+  &__info {
+    background-color: var(--bosch-white);
+    grid-column: 1/9;
+    padding: var(--gu2) var(--gu3);
+    margin-top: -115px;
+    h1 {
+      margin-bottom: var(--gu2);
+      @include mq-min() {
+        font-size: 64px;
+        line-height: 1.156;
+        margin: 0 0 var(--gu3) 0;
+      }
+    }
+    h5 {
+      font-size: 24px;
+      line-height: 1.417;
+      font-weight: 600;
+      @include mq(768px) {
+        font-size: 24px;
+        line-height: 1.417;
+      }
+      @include mq(576px) {
+        font-size: 20px;
+        line-height: 1.5;
+        margin: 0 0 var(--gu2) 0;
+      }
+    }
+  }
+}
+.contactPage_form {
+  background-color: var(--bosch-gray-95);
+  padding: 80px 0;
+  margin-bottom: 60px;
+  form {
+    & *{
+      box-sizing: border-box;
+    }
+    max-width: 745px;
+    margin: 0 auto;
+    p {
+      margin-bottom: 1rem;
+    }
+    .formField {
+      display: block;
+      margin-bottom: 1rem;
+      position: relative;
+      height: 3rem;
+      width: auto;
+      &.select {
+        &::after {
+          position: absolute;
+          content: "";
+          height: 24px;
+          width: 24px;
+          top: 0.75rem;
+          right: 0.7rem;
+          background-image: url(../img/sprite.svg);
+          background-repeat: no-repeat;
+          background-position: 40% 0;
+          pointer-events: none;
+        }
+      }
+    }
+    label {
+      position: absolute;
+      margin: 0.25rem 1rem auto;
+      font-size: 0.75rem;
+      max-width: calc(100% - 3.5rem);
+    }
+    label,
+    select {
+      color: var(--bosch-black);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    label + select {
+      padding-top: 1.125rem;
+      padding-bottom: 0.3131rem;
+    }
+    label + input {
+      padding-top: 18px;
+      padding-bottom: 5px;
+    }
+    select {
+      background-color: var(--bosch-gray-85);
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border: 0;
+      height: 3rem;
+      padding: 0;
+      -webkit-padding-end: 2.75rem;
+      padding-inline-end: 2.75rem;
+      -webkit-padding-start: 1rem;
+      padding-inline-start: 1rem;
+      width: 100%;
+
+      &:hover {
+        background-color: var(--bosch-gray-75);
+      }
+    }
+    input {
+      border: 0;
+      border-bottom: 1px solid var(--bosch-black);
+      background-color: var(--bosch-gray-85);
+      color: var(--bosch-black);
+      height: 48px;
+      padding: 0 16px;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+    }
+  }
+}
