@@ -28,7 +28,17 @@ include('funciones.php');
         <label for="">Lorem ipsum</label>
         <input type="text">
       </div>
-
+      <p>Terminos Lorem, ipsum dolor.*</p>
+      <div class="formField checkbox">
+        <input type="checkbox" name="cc" id="cc">
+        <label for="cc">
+          <span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id eos nisi tempora reprehenderit facere consectetur omnis est? Neque provident dicta sit deleniti officiis. <a href="#">Lorem, ipsum.</a>
+          </span>
+        </label>
+      </div>
+      <p>(*) Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <a href="#" class="btn btn-primary">Lorem ipsum</a>
     </form>
   </div>
 </section>

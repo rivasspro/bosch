@@ -6,7 +6,7 @@ footer {
     .Footer_row {
       display: grid;
       column-gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       color: var(--bosch-white);
       padding-top: var(--gu6);
       padding-bottom: var(--gu8);
