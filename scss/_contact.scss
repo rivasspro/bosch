@@ -180,6 +180,7 @@
       width: 0;
       opacity: 0;
       height: 0;
+      appearance: none;
       -moz-appearance: none;
       caret-color: var(--bosch-blue-50);
       &:checked + label::before {
