@@ -33,10 +33,7 @@ include('encabezados.php');
     <img src="./img/complete_3.png" alt="">
   </div>
 </section>
-<?php
-include('encabezados.php');
-include('funciones.php');
-?>
+
 <section class="contactPage">
   <div class="contactPage__hero --complete"></div>
   <div class="contactPage__text contenedor">
