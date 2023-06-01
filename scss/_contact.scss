@@ -12,6 +12,12 @@
     background: var(--bosch-white) url(../img/contact_hero.jpg) no-repeat
       center/cover;
     aspect-ratio: 3/1;
+    &.--complete {
+      background-image: url(../img/complete_hero.jpg);
+    }
+    &.--sections {
+      background-image: url(../img/sections_hero.jpg);
+    }
   }
   &__text {
     --gridGap: var(--gu5) var(--gu4);
@@ -35,6 +41,9 @@
         font-size: 64px;
         line-height: 1.156;
         margin: 0 0 var(--gu3) 0;
+      }
+      &.--sections{
+        margin-bottom: 0;
       }
     }
     h5 {
