@@ -1,6 +1,5 @@
 <?php
 include('encabezados.php');
-include('funciones.php');
 ?>
 <section class="contactPage">
   <div class="contactPage__hero"></div>
