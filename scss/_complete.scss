@@ -1,10 +1,5 @@
 .contactPage {
   padding-bottom: 60px;
-  &__hero.--complete {
-    background: var(--bosch-white) url(../img/complete_hero.jpg) no-repeat
-      center/cover;
-    aspect-ratio: 3/1;
-  }
   &__info.--complete {
     h1 {
       @extend .h1;
@@ -24,7 +19,7 @@
 }
 .completeInfo {
   padding-bottom: 80px;
-  h2,.h2-complete {
+  h2 {
     font-size: 24px;
     line-height: 1.417;
     margin: 0 0 var(--gu2) 0;
