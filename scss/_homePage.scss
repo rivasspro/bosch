@@ -1,0 +1,45 @@
+.homePage{
+  *{outline: 1px dashed red;}
+  max-width: 1600px;
+  margin: auto;
+  background-color: cyan;
+  position: relative;
+  padding-bottom: 80px;
+
+  .swiperHome{
+    --aspect-ratio:20/8;
+    .swiper-slide{
+      position: relative;
+    }
+    .swiper-media{
+      img{
+        aspect-ratio: var(--aspect-ratio);
+      }
+    }
+    .swiper-content{
+      position: absolute;
+      inset: 0 0 0 0;
+      padding: 80px 0;
+      .contenedor{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: var(--gridGap);
+      }
+      .swiper-text{
+        padding: var(--gu2) var(--gu3);
+        grid-column: 7/13;
+        background-color: var(--bosch-white);
+        @include mq(768px){
+          grid-column: 1/13;
+        }
+      }
+      h2{
+        font-size: 40px;
+        margin-bottom: var(--gu2);
+      }
+      .Link{
+        color: var(--bosch-blue-50);
+      }
+    }
+  }
+}

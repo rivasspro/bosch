@@ -25,16 +25,7 @@ body.overflow {
 }
 
 main {
-  article {
-    background-color: var(--bosch-white);
-    margin: 20px 0;
-    padding: 20px;
-    height: 500px;
-    @include mq(1193px) {
-      width: 95% !important;
-    }
-  }
-  h1,.h1 {
+  h1 {
     font-size: 40px;
     line-height: 1.25;
     margin: 0 0 var(--gu3) 0;
@@ -67,5 +58,9 @@ main {
         padding-top: 40px;
       }
     }
+  }
+  footer{
+    max-width: 1600px;
+    margin: auto;
   }
 }

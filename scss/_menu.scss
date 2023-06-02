@@ -511,6 +511,9 @@
     padding: 12px;
     padding-inline-end: 16px;
     padding-inline-start: 0;
+    &.Btn_bold{
+      font-weight: 600;
+    }
   }
   @include mq(767px) {
     & .Btn_label {

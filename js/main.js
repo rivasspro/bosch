@@ -249,6 +249,18 @@ modalClose.forEach((element, i) => {
 
 // -- Slider --
 
+var swiperHome = new Swiper(".swiperHome", {
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
+});
+
 var swiperThumbs = new Swiper(".swiperThumbs", {
   spaceBetween: 10,
   slidesPerView: 6,
