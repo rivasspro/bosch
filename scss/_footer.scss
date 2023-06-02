@@ -6,7 +6,7 @@ footer {
     .Footer_row {
       display: grid;
       column-gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       color: var(--bosch-white);
       padding-top: var(--gu6);
       padding-bottom: var(--gu8);
@@ -15,12 +15,12 @@ footer {
       margin: 0 auto;
       &.atc > div {
         padding: 0 14%;
-        @include mq(1193px) {
+        @include mq(762px) {
           padding: 0 15px;
         }
         &:last-child {
           border-inline-start: 1px solid var(--bosch-gray-80);
-          @include mq(1193px) {
+          @include mq(762px) {
             border-inline-start: none;
             padding-top: var(--gu4);
             margin-top: 40px;
@@ -28,7 +28,7 @@ footer {
           }
         }
       }
-      @include mq(1193px) {
+      @include mq(762px) {
         padding-inline-start: var(--gu2);
         padding-inline-end: var(--gu2);
       }
