@@ -5,7 +5,7 @@ include('encabezados.php');
   <div class="contenedor">
     <div class="productDetail_wrapper">
       <div class="productDetail_slider">
-        <div class="productLabel tagP"><img src="./img/products/label_a0.png" width="154" alt=""></div>
+        <div class="productLabel tag"><img src="./img/products/label_a0.png" width="154" alt=""></div>
         <div><img src="./img/products/residencial/5700s.png" alt=""></div>
       </div>
       <div class="productText">

@@ -214,41 +214,7 @@
           }
         }
       }
-      .contenedor-breadcrumbs {
-        ol {
-          display: flex;
-          height: 38px;
-          font-size: .75rem;
-          align-items: center;
-          li {
-            padding: 0 .5rem 0 0;
-            a {
-              font-size: 1em;
-              color: var(--bosch-black);
-              display: flex;
-              word-break: keep-all;
-              &::after {
-                content: "";
-                border-top: 1px solid currentColor;
-                -webkit-border-end: 1px solid currentColor;
-                border-inline-end: 1px solid currentColor;
-                position: relative;
-                width: 0.5em;
-                height: 0.5em;
-                -webkit-margin-start: 0.25em;
-                margin-inline-start: 0.25em;
-                transform: translateY(0.465em) rotate(45deg);
-              }
-              &:hover{
-                color: var(--bosch-blue-50);
-              }
-            }
-          }
-        }
-        @include mq(1193px){
-          display: none;
-        }
-      }
+    
 
       .contenedor-grid {
         position: relative;
@@ -469,6 +435,38 @@
             .Btn_label {
               display: block;
             }
+          }
+        }
+      }
+    }
+  }
+  &_breadcrumbs {
+    ol {
+      display: flex;
+      height: 38px;
+      font-size: .75rem;
+      align-items: center;
+      li {
+        padding: 0 .5rem 0 0;
+        a {
+          font-size: 1em;
+          color: var(--bosch-black);
+          display: flex;
+          word-break: keep-all;
+          &::after {
+            content: "";
+            border-top: 1px solid currentColor;
+            -webkit-border-end: 1px solid currentColor;
+            border-inline-end: 1px solid currentColor;
+            position: relative;
+            width: 0.5em;
+            height: 0.5em;
+            -webkit-margin-start: 0.25em;
+            margin-inline-start: 0.25em;
+            transform: translateY(0.465em) rotate(45deg);
+          }
+          &:hover{
+            color: var(--bosch-blue-50);
           }
         }
       }

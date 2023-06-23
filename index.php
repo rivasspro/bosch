@@ -1,6 +1,5 @@
 <?php
 $m_actual = 'home';
-include('funciones.php');
 include('encabezados.php');
 ?>
 

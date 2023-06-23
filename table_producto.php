@@ -13,10 +13,10 @@
     <tr>
       <td>De la etiqueta ErP</td>
       <td>
-        <div class="table_tag"><img src="./img/tag.png" width="154" alt=""></div>
+        <div class="tag"><img src="./img/tag.png" width="154" alt=""></div>
       </td>
       <td>
-        <div class="table_tag"><img src="./img/tag.png" width="154" alt=""></div>
+        <div class="tag"><img src="./img/tag.png" width="154" alt=""></div>
       </td>
       <td>De la etiqueta ErP</td>
       <td>De la etiqueta ErP</td>

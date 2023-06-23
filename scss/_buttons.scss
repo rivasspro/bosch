@@ -1,4 +1,4 @@
-.btn{
+.btn {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 12px;
@@ -7,15 +7,21 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
-.btn-primary{
-  color: var(--bosch-white);
-  border-color: var(--bosch-blue-50);
-  background-color: var(--bosch-blue-50);
-  &-outline{
-    background-color: transparent;
-    color: var(--bosch-blue-50);
+  &-primary {
+    color: var(--bosch-white);
     border-color: var(--bosch-blue-50);
+    background-color: var(--bosch-blue-50);
+    &-outline {
+      background-color: transparent;
+      color: var(--bosch-blue-50);
+      border-color: var(--bosch-blue-50);
+    }
+  }
+  &.--block{
+    width: 100%;
+  }
+  & + &{
+    margin-top: var(--gu3);
   }
 }
 .Link {

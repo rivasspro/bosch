@@ -34,7 +34,7 @@
         line-height: 1.357;
       }
     }
-    .table_tag {
+    .tag {
       margin-bottom: var(--gu4);
       img {
         cursor: pointer;
@@ -224,7 +224,7 @@
         .Link {
           @extend .Link;
         }
-        .table_tag > img {
+        .tag > img {
           cursor: pointer;
           max-width: 120px;
           height: 49px;

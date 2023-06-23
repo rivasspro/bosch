@@ -3,7 +3,8 @@
 @import "variables";
 @import "mixins";
 @import "base";
+@import "base_form";
 @import "buttons";
 @import "menu";
-@import "main";
+@import "main"; // include all pages
 @import "footer";

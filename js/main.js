@@ -1,6 +1,8 @@
 const contenedor_enlaces = document.querySelector(".contenedor-enlaces-nav"),
   categorias = document.querySelector("#grid-productos .categorias"),
-  contenedor_subcategorias = document.querySelector(".contenedor-subcategorias"),
+  contenedor_subcategorias = document.querySelector(
+    ".contenedor-subcategorias"
+  ),
   productos = document.getElementById("productos"),
   servicios = document.getElementById("servicios"),
   conocimiento = document.getElementById("conocimiento"),
@@ -21,7 +23,7 @@ const contenedor_enlaces = document.querySelector(".contenedor-enlaces-nav"),
   headerNavigation = document.querySelector(".Header_navigation"),
   btnMobile = document.getElementById("btnMobile"),
   quickAssistence = document.querySelector(".quickAssistence");
-  esDispositivoMovil = () => window.innerWidth <= 1193;
+esDispositivoMovil = () => window.innerWidth <= 1193;
 
 //Close Menu
 
@@ -99,22 +101,7 @@ btnMobile.addEventListener("click", (e) => {
   header.classList.toggle("-is-activo");
   document.querySelector("body").classList.toggle("overflow");
 });
-//Remove Class in Desktop
-// window.addEventListener('resize', () => {
-//   if (!esDispositivoMovil()) {
-//     document.querySelector('body').classList.remove('overflow');
-//     header.classList.remove('-is-activo');
-//     contenedor_enlaces.style = null;
-//     categorias.style = null;
-//   } else {
-//     grid_productos.classList.remove('activo')
-//     productos.classList.remove('activo')
-//     grid_servicios.classList.remove('activo')
-//     servicios.classList.remove('activo')
-//     grid_conocimiento.classList.remove('activo')
-//     conocimiento.classList.remove('activo')
-//   }
-// });
+
 // Open Categorias
 productos.addEventListener("click", () => {
   if (esDispositivoMovil()) {
@@ -154,11 +141,15 @@ btnRegresar2.addEventListener("click", () => {
   quickAssistence.style.display = null;
 });
 // Open Sub-categorias Productos
-document.querySelectorAll("#grid-productos .categorias a").forEach((elemento) => {
+document
+  .querySelectorAll("#grid-productos .categorias a")
+  .forEach((elemento) => {
     if (esDispositivoMovil()) {
       elemento.addEventListener("click", (e) => {
         // console.log(e.target.dataset.categoria)
-        document.querySelectorAll("#grid-productos .subcategoria").forEach((categoria) => {
+        document
+          .querySelectorAll("#grid-productos .subcategoria")
+          .forEach((categoria) => {
             // console.log(categoria.dataset.categoria);
             categoria.classList.remove("activo");
             //contenedor_subcategorias.classList.remove('activo');
@@ -196,58 +187,96 @@ backEmisores.addEventListener("click", () => {
 
 // -- MODAL --
 
-const tag = document.querySelectorAll(".table_tag");
-const modal = document.querySelector(".modal__tag");
-const modalClose = document.querySelectorAll(".modal__close");
+const tag = document.querySelectorAll(".tag");
 const swiperZoom = document.querySelectorAll(".swiper-zoom");
+const btnModalClose = document.querySelectorAll(".modal__close");
+const btnNoticePrivacy = document.querySelector(".notice-privacy");
+
+const modal = document.querySelector(".modal__tag");
 const modalSwiper = document.querySelector(".modal__swiper");
+const modalNoticePrivacy = document.querySelector(".modal__notice_privacy");
 
 const bodyOverflow = () => {
   document.querySelector("body").classList.toggle("overflow");
 };
 
-function css(element, style) {
-  for (const property in style)
-      element.style[property] = style[property];
-}
-// -- Tags --
-
+// -- Tag --
+tag.forEach((modalOpenElement, index) => {
+  modalOpenElement.addEventListener("click", (e) => {
+    //(e) evita link haga scroll al click
+    e.preventDefault();
+    modal.classList.add("--show");
+    bodyOverflow();
+    console.log(modalOpenElement + ` Open Modal ` + [index]);
+  });
+});
+// swiper button zoom
 swiperZoom.forEach((element, i) => {
   element.addEventListener("click", (e) => {
     e.preventDefault();
-    modalSwiper.classList.add("modal--show");
+    modalSwiper.classList.add("--show");
     swiperModal.slideTo(swiper.activeIndex);
     bodyOverflow();
     console.log(element + ` swiper-zomm ` + [i]);
-    console.log('David Rivas | uxui | @rivaspro | david22rivas@gmail.com');
   });
 });
+// Link Notice Privacy Footer
+btnNoticePrivacy.addEventListener("click", (e) => {
+  e.preventDefault();
+  modalNoticePrivacy.classList.add("--show");
+  bodyOverflow();
+});
 
-tag.forEach((element, i) => {
+// Close All Modals
+btnModalClose.forEach((element, index) => {
   element.addEventListener("click", (e) => {
-    //(e) evita link haga scroll al click
     e.preventDefault();
-    modal.classList.add("modal--show");
+
+    const elements = [modal, modalSwiper, modalNoticePrivacy];
+
+    elements.forEach((el) => {
+      if (el !== null) {
+        el.classList.remove("--show");
+      }
+    });
+
     bodyOverflow();
-    console.log(element + ` Open Modal ` + [i]);
-    console.log('David Rivas | uxui | @rivaspro | david22rivas@gmail.com');
+    console.log(`Button close modal: ${index}`);
   });
 });
 
-modalClose.forEach((element, i) => {
-  element.addEventListener("click", (e) => {
-    //(e) evita link haga scroll al click
+// Notice Privacy
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn_accep_privacy = document.querySelector(".--accept-privacy");
+  const btn_no_accep_privacy = document.querySelector(".--no-accept-privacy");
+  let currentTime = 3000;
+
+  btn_no_accep_privacy.addEventListener("click", (e) => {
     e.preventDefault();
-    // close both modal's
-    modal.classList.remove("modal--show");
-    modalSwiper.classList.remove("modal--show");
+    modalNoticePrivacy.classList.remove("--show");
     bodyOverflow();
-    console.log(element + ` Close Modal ` + [i]);
-    console.log('David Rivas | uxui | @rivaspro | david22rivas@gmail.com');
   });
+
+  btn_accep_privacy.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.setItem("modalPrivacyHide", "true");
+    modalNoticePrivacy.classList.remove("--show");
+    bodyOverflow();
+  });
+
+  const modalPrivacyHide = localStorage.getItem("modalPrivacyHide");
+  if (modalPrivacyHide === "true") {
+    modalNoticePrivacy.classList.remove("--show");
+  } else {
+    setTimeout(function () {
+      modalNoticePrivacy.classList.add("--show");
+      bodyOverflow();
+    }, currentTime);
+  }
 });
 
-// -- Slider --
+// -- Slider config --
 
 var swiperHome = new Swiper(".swiperHome", {
   spaceBetween: 10,
@@ -258,7 +287,7 @@ var swiperHome = new Swiper(".swiperHome", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  }
+  },
 });
 
 var swiperThumbs = new Swiper(".swiperThumbs", {
@@ -280,7 +309,7 @@ var swiper = new Swiper(".swiperMain", {
   },
   thumbs: {
     swiper: swiperThumbs,
-  }
+  },
 });
 
 var swiperModal = new Swiper(".swiperModal", {

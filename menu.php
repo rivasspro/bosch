@@ -1,4 +1,5 @@
 <header class="Header -is-sticky">
+   <!-- /Quick links -->
   <div class="Header_top -container">
     <a class="Header_logo " href="." target="_self" aria-label="Bosch TT">
       <img class="Logo" alt="Bosch TT" title="Bosch TT" src="./img/bosch.svg" width="144" height="32">
@@ -31,6 +32,7 @@
       <span class="Btn_label">Menú</span>
     </button>
   </div>
+ <!-- /Nav items -->
   <div class="Header_navigation">
     <nav class="menu contenedor" id="menu">
 
@@ -59,22 +61,8 @@
             </a>
           </li>
         </ul>
-        <!-- Menu opcional -->
-        <!-- <div class="enlaces">
-          <a class="SubMenu_Btn" href="#">Menu 1</a>
-          <a class="SubMenu_Btn" href="#">Menu 2</a>
-          <a class="SubMenu_Btn" href="#">Menu 3</a>
-        </div> -->
       </div>
-      <?php if ($m_actual != 'home') { ?>
-        <div class="contenedor-breadcrumbs">
-          <ol>
-            <li><a href="#">Lorem</a></li>
-            <li><a href="#">Lorem 1</a></li>
-            <li><a href="#">Lorem 2</a></li>
-          </ol>
-        </div>
-      <?php } ?>
+
       <!-- Productos -->
       <div class="contenedor-grid">
         <div class="grid-padre">
@@ -226,6 +214,16 @@
     <div class="quickAssistence">
       <?php include('ae_quickAssistance.php'); ?>
     </div>
-
   </div>
+  <!-- /Breadcrumbs -->
+  <?php if ($m_actual != 'home') { ?>
+    <div class="Header_breadcrumbs contenedor">
+      <ol>
+        <li><a href="#">Lorem</a></li>
+        <li><a href="#">Lorem 1</a></li>
+        <li><a href="#">Lorem 2</a></li>
+      </ol>
+    </div>
+  <?php } ?>
+
 </header>

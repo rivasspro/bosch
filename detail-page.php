@@ -1,6 +1,5 @@
 <?php
 include('encabezados.php');
-include('funciones.php');
 ?>
 
 <section class="detailPage section">
@@ -22,7 +21,7 @@ include('funciones.php');
       </div>
       <p>Lorem ipsum dolor sit.</p>
       <a class="title" href="#">Lorem, ipsum dolor.</a>
-      <div class="table_tag"><img src="./img/tag.png" alt=""></div>
+      <div class="tag"><img src="./img/tag.png" alt=""></div>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing </p>
       <ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
@@ -86,7 +85,7 @@ include('funciones.php');
           <div class="details__table-end">Lorem ipsum dolor sit amet.</div>
           <div class="details__table-start">Lorem</div>
           <div class="details__table-end">
-            <div class="table_tag">
+            <div class="tag">
               <img src="./img/tag.png" alt="">
             </div>
           </div>
