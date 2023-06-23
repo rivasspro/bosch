@@ -12,6 +12,7 @@ const contenedor_enlaces = document.querySelector(".contenedor-enlaces-nav"),
   btnClose = document.querySelector(".btnClose"),
   btnClose1 = document.querySelector(".btnClose1"),
   btnClose2 = document.querySelector(".btnClose2"),
+  body = document.getElementsByTagName("body")[0],
   btnRegresar = document.querySelector(".btn-regresar"),
   btnRegresar1 = document.querySelector(".btn-regresar1"),
   btnRegresar2 = document.querySelector(".btn-regresar2"),
@@ -45,6 +46,9 @@ btnClose2.addEventListener("click", () => {
   servicios.classList.remove("activo");
   conocimiento.classList.remove("activo");
 });
+
+
+
 
 // Toogle Submenus
 productos.addEventListener("click", () => {
@@ -184,6 +188,32 @@ backEmisores.addEventListener("click", () => {
   contenedor_subcategorias.classList.remove("activo");
   console.log("backSub");
 });
+
+// Barra de busqueda
+const svgSearch = document.getElementById('svg_search');
+const searchForm = document.getElementById('searchForm');
+const inputSearch = document.getElementById('inputSearch');
+
+svgSearch.addEventListener('click', (e)=>{
+  e.preventDefault();
+  searchForm.classList.toggle('activo');
+  inputSearch.focus();
+})
+const searchClose = document.getElementById('searchClose');
+searchClose.addEventListener('click', (e)=>{
+  e.preventDefault();
+  searchForm.classList.remove('activo');
+})
+
+
+body.addEventListener('click', function(event) {
+  // Verificar si el objetivo del evento no es el menú
+  if (event.target !== menu && !menu.contains(event.target)) {
+    // Cerrar el menú aquí
+    grid_productos.classList.remove('activo');
+  }
+});
+
 
 // -- MODAL --
 
