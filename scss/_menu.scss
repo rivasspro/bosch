@@ -119,6 +119,7 @@
     height: initial;
     max-height: none;
     overflow-y: visible;
+    z-index: 1;
     @include mq(1193px) {
       display: none;
     }
